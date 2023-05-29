@@ -17,9 +17,10 @@
 //
 //    }
 //
-//    public static void/*moet dit returntype "void" zijn of wat anders?*/ randomnumbergenerator(/*Heeft deze methode nog parameter(s) nodig?*/){
+//    public static void Integer randomnumbergenerator(/*Heeft deze methode nog parameter(s) nodig?*/){
 //         /*
 //        Vul hier de body van de methode in.
+//
 //
 //        Stappenplan:
 //        - Maak een nieuwe variabele van type Random. (Tip: Zoek op internet hoe je Random kunt gebruiken)
