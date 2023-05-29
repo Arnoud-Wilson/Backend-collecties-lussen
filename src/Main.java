@@ -1,16 +1,38 @@
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
         Integer[] numeric = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
         String[] alphabetic = {"één", "twee", "drie", "vier", "vijf", "zes", "zeven", "acht", "negen", "nul"};
+        boolean play = true;
+        String invalid = "ongeldige invoer";
+        String input;
 
-        Translator hoi = new Translator(numeric, alphabetic);
+        Translator translateNumToAlpha = new Translator(numeric, alphabetic);
+        Scanner inputScanner = new Scanner(System.in);
 
-        System.out.println(hoi);
+        while (play == true) {
+            System.out.println("Type 'x' om te stoppen / Type 'v' om te vertalen.");
+            input = inputScanner.nextLine();
+            if (input.equals("x")) {
+                play = false;
+            } else if (input.equals("v")) {
+                System.out.println("Type een cijfer in van 0 t/m 9.");
+                int number = inputScanner.nextInt();
+                inputScanner.nextLine(); // Waarom deze extra nextLine?? Bij niet toevoegen crashed hij....
+                if (number < 10) {
+                    String result = translateNumToAlpha.translate(number);
+                    System.out.println("De vertaling van " + number + " is " + result);
+                } else System.out.println(invalid);
+            }else System.out.println(invalid);
+        }
 
-        System.out.println(hoi.translate(7));
+
+
+
+        //TODO: Zie regel 24
 
     }
 
