@@ -1,8 +1,9 @@
 import java.util.HashMap;
+import java.util.Map;
 
 public class Translator {
     // Declare object //
-    HashMap<Integer, String> numericAlpha = new HashMap<>();
+    Map<Integer, String> numericAlpha = new HashMap<>();
 
     // Declare Translator object constructor //
     public Translator(Integer[] numeric, String[] alphabetic) {

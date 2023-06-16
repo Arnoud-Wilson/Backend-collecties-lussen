@@ -22,7 +22,7 @@ public class Main {
             } else if (input.equals("v")) {
                 System.out.println("Type een cijfer in van 0 t/m 9.");
                 int number = inputScanner.nextInt(); // Als je nu een letter invoert crashed hij. Hoe kun je dit oplossen?
-                inputScanner.nextLine(); // Waarom deze extra nextLine?? Bij niet toevoegen crashed hij....
+                inputScanner.nextLine();
                 if (number < 10) {
                     String result = translateNumToAlpha.translate(number);
                     System.out.println("De vertaling van " + number + " is " + result);
@@ -30,7 +30,7 @@ public class Main {
             }else System.out.println(invalid);
         }
 
-        //TODO: Zie regel 24 en 25
+        //TODO: Zie regel 24
 
     }
 }
